@@ -1,36 +1,35 @@
 package function
 
-fun main(args : Array<String>) {
-    val sum = sum1(10, 20)
+fun main(args: Array<String>) {
+	val sum = sum1(10, 20)
 
-    println(sum)
+	println(sum)
 
-    println(sum2(20, 30))
+	println(sum2(20, 30))
 
-    noReturnFunction("hello")
+	noReturnFunction("hello")
 
-    defaultParameter("no value")
-    defaultParameter()
+	defaultParameter("no value")
+	defaultParameter()
 
-    namedArgument("I", "am", "seonho")
-    namedArgument(a= "I", c="seonho", b="am")
+	namedArgument("I", "am", "seonho")
+	namedArgument(a = "I", c = "seonho", b = "am")
 }
-
 
 fun sum1(a: Int, b: Int): Int {
-    return a + b;
+	return a + b
 }
 
-fun sum2(a:Int, b:Int) = a+b
+fun sum2(a: Int, b: Int) = a + b
 
-fun noReturnFunction(a:String) {
-    println("called function : $a")
+fun noReturnFunction(a: String) {
+	println("called function : $a")
 }
 
-fun defaultParameter(a:String ="default value") {
-    println("defaultParameter : $a")
+fun defaultParameter(a: String = "default value") {
+	println("defaultParameter : $a")
 }
 
-fun namedArgument(a:String, b:String, c:String) {
-    println("$a , $b , $c")
+fun namedArgument(a: String, b: String, c: String) {
+	println("$a , $b , $c")
 }

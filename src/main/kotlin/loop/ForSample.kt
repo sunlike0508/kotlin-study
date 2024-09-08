@@ -1,30 +1,27 @@
 package loop
 
-import kotlin.random.Random
-
 class ForSample {
-    companion object {
+	companion object {
 
-        @JvmStatic
-        fun main(args : Array<String>) {
+		@JvmStatic
+		fun main(args: Array<String>) {
+			for (i in 1..5) {
+				println(i)
+			}
 
-            for(i in 1..5) {
-                println(i)
-            }
+			println()
 
-            println()
+			for (i in 5 downTo 1) {
+				println(i)
+			}
 
-            for(i in 5 downTo  1) {
-                println(i)
-            }
+			println()
 
-            println()
+			for (i in 1..5 step 2) {
+				println(i)
+			}
 
-            for(i in 1..5 step 2) {
-                println(i)
-            }
-
-            println()
-        }
-    }
+			println()
+		}
+	}
 }

@@ -1,29 +1,30 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.7.10"
-    application
+	kotlin("jvm") version "1.7.10"
+	id("org.jlleitschuh.gradle.ktlint") version "11.3.2"
+	application
 }
 
 group = "studio.aroundhub"
-version = "0.0.1"  // 강의자 그냥 별로라고 바꿈
+version = "0.0.1" // 강의자 그냥 별로라고 바꿈
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+	testImplementation(kotlin("test"))
 }
 
 tasks.test {
-    useJUnitPlatform()
+	useJUnitPlatform()
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "17" // 처음에 1.8로 설정되어 있음. 인텔리제이가 안바까주는듯?
+	kotlinOptions.jvmTarget = "17" // 처음에 1.8로 설정되어 있음. 인텔리제이가 안바까주는듯?
 }
 
 application {
-    mainClass.set("MainKt")
+	mainClass.set("MainKt")
 }
